@@ -1,0 +1,752 @@
+{
+  "GET /me": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "id": "emp_146",
+      "employee_id": "SSA146",
+      "first_name": "Pallawi",
+      "last_name": "Kumari",
+      "full_name": "Pallawi Kumari",
+      "designation": "Software Developer",
+      "department_id": "dep_tech",
+      "department": "Tech",
+      "location": "Gurgaon",
+      "email": "pallawi.kumari@example.com",
+      "photo_url": null,
+      "avatar_color": "#8b6e62",
+      "notification_count": 99
+    }
+  },
+
+  "GET /myspace/overview": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "profile": {
+        "id": "emp_146",
+        "employee_id": "SSA146",
+        "full_name": "Pallawi Kumari",
+        "designation": "Software Developer",
+        "photo_url": null,
+        "avatar_color": "#8b6e62",
+        "status": "weekend",
+        "status_label": "Weekend"
+      },
+      "attendance_today": {
+        "date": "2026-09-13",
+        "checked_in": false,
+        "check_in_time": null,
+        "worked_seconds": 0
+      },
+      "reporting_manager": {
+        "id": "emp_018",
+        "employee_id": "SSA0018",
+        "full_name": "Rahul Mehta",
+        "designation": "Engineering Manager",
+        "photo_url": null,
+        "status": "weekend",
+        "status_label": "Weekend"
+      },
+      "department_members": [
+        { "id": "emp_003", "employee_id": "SSA003", "full_name": "Vikram Singh", "designation": "Director of Tech & Engineering", "photo_url": null, "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_018", "employee_id": "SSA0018", "full_name": "Rahul Mehta", "designation": "Engineering Manager", "photo_url": null, "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_128", "employee_id": "SSA128", "full_name": "Arjun Nair", "designation": "Senior Backend Developer", "photo_url": null, "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_104", "employee_id": "SSA104", "full_name": "Karan Malhotra", "designation": "Senior Software Developer", "photo_url": null, "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_121", "employee_id": "SSA121", "full_name": "Siddharth Rao", "designation": "DevOps Engineer", "photo_url": null, "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_139", "employee_id": "SSA139", "full_name": "Ananya Das", "designation": "Data Analyst", "photo_url": null, "status": "weekend", "status_label": "Weekend" }
+      ]
+    }
+  },
+
+  "GET /holidays/upcoming": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        { "id": "hol_04", "name": "Gandhi Jayanti", "date": "2026-10-02" },
+        { "id": "hol_05", "name": "Dussehra", "date": "2026-10-20" },
+        { "id": "hol_06", "name": "Bhai Dooj", "date": "2026-11-10" },
+        { "id": "hol_07", "name": "Christmas", "date": "2026-12-25" },
+        { "id": "hol_08", "name": "New Year", "date": "2027-01-01" }
+      ],
+      "total": 5
+    }
+  },
+
+  "GET /myspace/feeds": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        {
+          "id": "feed_06",
+          "type": "reminder",
+          "title": "Reminder for check-in",
+          "message": "Your shift begins at 09 : 00 AM. Ensure you have marked your attendance.",
+          "created_at": "2026-09-11T10:05:00+05:30",
+          "comments": []
+        },
+        {
+          "id": "feed_05",
+          "type": "reminder",
+          "title": "Reminder for check-in",
+          "message": "Your shift begins at 09 : 00 AM. Ensure you have marked your attendance.",
+          "created_at": "2026-09-10T10:05:00+05:30",
+          "comments": []
+        },
+        {
+          "id": "feed_04",
+          "type": "approval",
+          "title": "Leave request approved",
+          "message": "Your Sick Leave request for 08-Sep-2026 has been approved by Rahul Mehta.",
+          "created_at": "2026-09-08T16:20:00+05:30",
+          "comments": []
+        },
+        {
+          "id": "feed_03",
+          "type": "holiday",
+          "title": "Upcoming holiday",
+          "message": "Gandhi Jayanti falls on 02-Oct-2026, Friday.",
+          "created_at": "2026-09-01T09:00:00+05:30",
+          "comments": []
+        },
+        {
+          "id": "feed_02",
+          "type": "mail_alert",
+          "title": "Probation & Confirmation Policy updated",
+          "message": "HR has shared the updated Probation & Confirmation Policy. Please read it in Files.",
+          "created_at": "2026-08-20T12:30:00+05:30",
+          "comments": []
+        },
+        {
+          "id": "feed_01",
+          "type": "announcement",
+          "title": "Let the Colors of Holi Fill Your Life with Joy!",
+          "message": "Wishing everyone a very happy and safe Holi.",
+          "created_at": "2026-03-04T11:11:00+05:30",
+          "comments": [
+            { "id": "cmt_01", "author_name": "Arjun Nair", "message": "Happy Holi everyone!", "created_at": "2026-03-04T11:30:00+05:30" }
+          ]
+        }
+      ],
+      "total": 6,
+      "page": 1,
+      "page_size": 20
+    }
+  },
+
+  "GET /myspace/profile": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "highlights": [
+        { "key": "location", "label": "Location", "value": "Gurgaon" },
+        { "key": "department", "label": "Department", "value": "Tech" },
+        { "key": "shift", "label": "Shift", "value": "General (09:00 AM - 06:00 PM)" },
+        { "key": "time_zone", "label": "Time zone", "value": "India Standard Time (GMT+05:30)" },
+        { "key": "seating_location", "label": "Seating Location", "value": "Gurgaon" },
+        { "key": "email", "label": "Email address", "value": "pallawi.kumari@example.com" },
+        { "key": "personal_mobile", "label": "Personal Mobile Number", "value": "91-9876543210" },
+        { "key": "work_phone", "label": "Work Phone Number", "value": "9876543210" }
+      ],
+      "about_me": "I am Pallawi, working as a Software Developer. I specialize in designing, developing, and maintaining software applications.",
+      "organization_structure": [{ "label": "Department", "value": "Tech" }],
+      "tags": [],
+      "sections": [
+        {
+          "key": "basic",
+          "title": "Basic information",
+          "type": "fields",
+          "fields": [
+            { "label": "Employee ID", "value": "SSA146" },
+            { "label": "Preferred Name", "value": null },
+            { "label": "First Name", "value": "Pallawi" },
+            { "label": "Email address", "value": "pallawi.kumari@example.com" },
+            { "label": "Last Name", "value": "Kumari" }
+          ]
+        },
+        {
+          "key": "work",
+          "title": "Work Information",
+          "type": "fields",
+          "fields": [
+            { "label": "Department", "value": "Tech" },
+            { "label": "Employment Type", "value": "Permanent" },
+            { "label": "Location", "value": "Gurgaon" },
+            { "label": "Employee Status", "value": "Active" },
+            { "label": "Designation", "value": "Software Developer" },
+            { "label": "Source of Hire", "value": "Direct" },
+            { "label": "Date of Joining", "value": "11-Aug-2025" },
+            { "label": "Current Experience", "value": "1 year(s) 1 month(s)" }
+          ]
+        },
+        {
+          "key": "hierarchy",
+          "title": "Hierarchy Information",
+          "type": "fields",
+          "fields": [{ "label": "Reporting Manager", "value": "SSA0018 - Rahul Mehta" }]
+        },
+        {
+          "key": "personal",
+          "title": "Personal Details",
+          "type": "fields",
+          "fields": [
+            { "label": "Date of Birth", "value": "01-Jan-2000" },
+            { "label": "Ask me about/Expertise", "value": null },
+            { "label": "Age", "value": "26 year(s) 8 month(s)" },
+            { "label": "Gender", "value": "Female" },
+            { "label": "Marital Status", "value": "Single" },
+            { "label": "About Me", "value": "I am Pallawi, working as a Software Developer. I specialize in designing, developing, and maintaining software applications." }
+          ]
+        },
+        {
+          "key": "identity",
+          "title": "Identity Information",
+          "type": "fields",
+          "fields": [
+            { "label": "UAN", "value": "**********" },
+            { "label": "PAN", "value": "**********" },
+            { "label": "Aadhaar", "value": "**********" }
+          ]
+        },
+        {
+          "key": "contact",
+          "title": "Contact Details",
+          "type": "fields",
+          "fields": [
+            { "label": "Work Phone Number", "value": "9876543210" },
+            { "label": "Personal Mobile Number", "value": "91-9876543210" },
+            { "label": "Extension", "value": null },
+            { "label": "Personal Email Address", "value": "pallawi@example.com" },
+            { "label": "Seating Location", "value": "Gurgaon" },
+            { "label": "Present Address", "value": "Sector 44, Gurgaon, Haryana 122003" },
+            { "label": "Permanent Address", "value": "Patna, Bihar 800001" }
+          ]
+        },
+        {
+          "key": "system",
+          "title": "System Fields",
+          "type": "fields",
+          "fields": [
+            { "label": "Added By", "value": "SSA0018 - Rahul Mehta" },
+            { "label": "Modified By", "value": "SSA0018 - Rahul Mehta" },
+            { "label": "Added Time", "value": "11-Aug-2025 10:00 AM" },
+            { "label": "Modified Time", "value": "11-Aug-2025 10:05 AM" }
+          ]
+        },
+        {
+          "key": "work_experience",
+          "title": "Work experience",
+          "type": "table",
+          "columns": ["Company name", "Job Title", "From Date", "To Date", "Job Description", "Relevant"],
+          "rows": [["Tech Solutions Pvt Ltd", "Associate Developer", "01-Jul-2023", "31-Jul-2025", "Frontend development", "Yes"]]
+        },
+        {
+          "key": "education",
+          "title": "Education Details",
+          "type": "table",
+          "columns": ["Institute Name", "Degree/Diploma", "Specialization", "Date of Completion"],
+          "rows": [["ABC Institute of Technology", "B.Tech", "Computer Science", "30-Jun-2023"]]
+        },
+        {
+          "key": "dependents",
+          "title": "Dependent Details",
+          "type": "table",
+          "columns": ["Name", "Relationship", "Date of Birth"],
+          "rows": []
+        },
+        {
+          "key": "payroll",
+          "title": "Payroll section",
+          "type": "fields",
+          "fields": [
+            { "label": "Fathers Name", "value": "Rajesh Kumar" },
+            { "label": "Bank Holder Name", "value": "Pallawi Kumari" },
+            { "label": "Bank Name", "value": "HDFC Bank" },
+            { "label": "Bank Account Number", "value": "**********" }
+          ]
+        },
+        {
+          "key": "documents",
+          "title": "Documents to be submitted",
+          "type": "fields",
+          "fields": [
+            { "label": "Scanned copy of PAN Card", "value": "pan_card.pdf" },
+            { "label": "Scanned Copy of Aadhar", "value": "aadhaar_card.pdf" },
+            { "label": "Last qualification document", "value": "degree_certificate.pdf" }
+          ]
+        }
+      ]
+    }
+  },
+
+  "GET /myspace/approvals": {
+    "success": true,
+    "message": "OK",
+    "data": { "items": [], "total": 0 }
+  },
+
+  "GET /leave/balances": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        { "id": "lt_cl", "name": "Casual Leave", "code": "CL", "color": "#5b6bd6", "available": 0.5, "booked": 4 },
+        { "id": "lt_pl", "name": "Privilege Leaves", "code": "PL", "color": "#3a9fd6", "available": 11, "booked": 0 },
+        { "id": "lt_sl", "name": "Sick Leave", "code": "SL", "color": "#e0565b", "available": 0, "booked": 4.5 }
+      ],
+      "total": 3
+    }
+  },
+
+  "GET /files": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        {"id": "file_01", "name": "Travel Policy_2026.pdf", "file_type": "pdf", "size_bytes": 157300, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_02", "name": "Remuneration Policy_2026.pdf", "file_type": "pdf", "size_bytes": 164600, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_03", "name": "Reimbursement Policy_2026.pdf", "file_type": "pdf", "size_bytes": 171900, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_04", "name": "Probation & Confirmation Policy_2026.pdf", "file_type": "pdf", "size_bytes": 179200, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_05", "name": "POSH Policy_2026.pdf", "file_type": "pdf", "size_bytes": 186500, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_06", "name": "PIP Policy_2026.pdf", "file_type": "pdf", "size_bytes": 193800, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_07", "name": "Performance Management Policy_2026.pdf", "file_type": "pdf", "size_bytes": 201100, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_08", "name": "Paternity Policy_2026.pdf", "file_type": "pdf", "size_bytes": 208400, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_09", "name": "Maternity Leave Policy_2026.pdf", "file_type": "pdf", "size_bytes": 215700, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_10", "name": "Leave Policy_2026.pdf", "file_type": "pdf", "size_bytes": 223000, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_11", "name": "Internship Policy_2026.pdf", "file_type": "pdf", "size_bytes": 230300, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_12", "name": "Information Security & Asset Management Policy_2026.pdf", "file_type": "pdf", "size_bytes": 237600, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_13", "name": "Code of Conduct_2026.pdf", "file_type": "pdf", "size_bytes": 244900, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_14", "name": "Work From Home Policy_2026.pdf", "file_type": "pdf", "size_bytes": 252200, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Policy", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_15", "name": "Holiday List_2026.pdf", "file_type": "pdf", "size_bytes": 259500, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "General", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_16", "name": "Employee Handbook_2026.pdf", "file_type": "pdf", "size_bytes": 266800, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Handbook", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null},
+        {"id": "file_17", "name": "IT Asset Declaration Form.pdf", "file_type": "pdf", "size_bytes": 274100, "uploaded_at": "2026-08-20T10:00:00+05:30", "shared_by": "Meera Joshi", "scope": "organization", "folder": "Forms", "shared_with": "All", "updated_on": "2026-08-20", "download_url": null}
+      ],
+      "total": 17
+    }
+  },
+
+  "GET /myspace/career-history": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "current_experience_months": 13,
+      "total_experience_months": 13,
+      "date_of_joining": "2025-08-11",
+      "timeline": [
+        {
+          "id": "car_02",
+          "date": "2025-08-11",
+          "type": "update",
+          "changes": [
+            { "label": "Department", "value": "Tech" },
+            { "label": "Location", "value": "Gurgaon" },
+            { "label": "Designation", "value": "Software Developer" }
+          ],
+          "message": "Your Department, Location, Designation have been updated"
+        },
+        {
+          "id": "car_01",
+          "date": "2025-08-11",
+          "type": "joined",
+          "changes": [],
+          "message": "Joined the organization"
+        }
+      ]
+    }
+  },
+
+  "GET /myspace/related-data": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        { "key": "travel_expense", "label": "Travel Expense", "count": 0 },
+        { "key": "travel_request", "label": "Travel Request", "count": 0 }
+      ],
+      "total": 2
+    }
+  },
+
+  "GET /myspace/dashboard": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "birthdays": [],
+      "new_hires": [],
+      "favorites": [],
+      "quick_links": [],
+      "announcements": [
+        { "id": "ann_01", "title": "Let the Colors of Holi Fill Your Life with Joy!", "created_at": "2026-03-04T11:11:00+05:30" }
+      ],
+      "leave_report": [
+        { "key": "absent", "name": "Absent", "count": 0, "available": null, "color": "#c4c4c4" },
+        { "key": "lt_cl", "name": "Casual Leave", "count": 4, "available": 0.5, "color": "#5b6bd6" },
+        { "key": "lt_pl", "name": "Privilege Leaves", "count": 0, "available": 11, "color": "#3a9fd6" },
+        { "key": "lt_sl", "name": "Sick Leave", "count": 4.5, "available": 0, "color": "#e0565b" }
+      ],
+      "upcoming_holidays": [
+        { "id": "hol_04", "name": "Gandhi Jayanti", "date": "2026-10-02" },
+        { "id": "hol_05", "name": "Dussehra", "date": "2026-10-20" },
+        { "id": "hol_06", "name": "Bhai Dooj", "date": "2026-11-10" }
+      ],
+      "pending_tasks": [],
+      "my_files": {
+        "total": 17,
+        "organization_files": [
+          { "id": "file_01", "name": "Travel Policy_2026.pdf", "file_type": "pdf", "size_bytes": 245000, "uploaded_at": "2026-01-05T10:00:00+05:30", "shared_by": "HR" },
+          { "id": "file_02", "name": "Remuneration Policy_2026.pdf", "file_type": "pdf", "size_bytes": 198000, "uploaded_at": "2026-01-05T10:00:00+05:30", "shared_by": "HR" },
+          { "id": "file_03", "name": "Reimbursement Policy_2026.pdf", "file_type": "pdf", "size_bytes": 176000, "uploaded_at": "2026-01-05T10:00:00+05:30", "shared_by": "HR" },
+          { "id": "file_04", "name": "Probation & Confirmation Policy_2026.pdf", "file_type": "pdf", "size_bytes": 212000, "uploaded_at": "2026-01-05T10:00:00+05:30", "shared_by": "HR" }
+        ],
+        "employee_files": []
+      },
+      "work_anniversaries": [],
+      "wedding_anniversaries": [],
+      "lop_summary": null
+    }
+  },
+
+  "GET /attendance/entries": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        { "date": "2026-09-01", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "present", "status_label": "Present", "work_mode": "remote", "check_in": "08:55", "check_out": "18:55", "worked_minutes": 600 },
+        { "date": "2026-09-02", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "present", "status_label": "Present", "work_mode": "office", "check_in": "09:02", "check_out": "21:36", "worked_minutes": 754 },
+        { "date": "2026-09-03", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "present", "status_label": "Present", "work_mode": "office", "check_in": "09:10", "check_out": "19:37", "worked_minutes": 627 },
+        { "date": "2026-09-04", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "present", "status_label": "Present", "work_mode": "remote", "check_in": "08:48", "check_out": "20:09", "worked_minutes": 681 },
+        { "date": "2026-09-05", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "weekend", "status_label": "Weekend", "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-06", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "weekend", "status_label": "Weekend", "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-07", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "present", "status_label": "Present", "work_mode": "office", "check_in": "09:05", "check_out": "21:39", "worked_minutes": 754 },
+        { "date": "2026-09-08", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "on_leave", "status_label": "Sick Leave", "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-09", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "present", "status_label": "Present", "work_mode": "remote", "check_in": "09:00", "check_out": "19:49", "worked_minutes": 649 },
+        { "date": "2026-09-10", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "present", "status_label": "Present", "work_mode": "office", "check_in": "08:50", "check_out": "21:57", "worked_minutes": 787 },
+        { "date": "2026-09-11", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "present", "status_label": "Present", "work_mode": "office", "check_in": "09:15", "check_out": "21:05", "worked_minutes": 710 },
+        { "date": "2026-09-12", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "weekend", "status_label": "Weekend", "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-13", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "weekend", "status_label": "Weekend", "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-14", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-15", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-16", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-17", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-18", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-19", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "weekend", "status_label": "Weekend", "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-20", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "weekend", "status_label": "Weekend", "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-21", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-22", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-23", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-24", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-25", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-26", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "weekend", "status_label": "Weekend", "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-27", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": "weekend", "status_label": "Weekend", "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-28", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-29", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 },
+        { "date": "2026-09-30", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "status": null, "status_label": null, "work_mode": null, "check_in": null, "check_out": null, "worked_minutes": 0 }
+      ],
+      "total": 30
+    }
+  },
+
+  "GET /attendance/regularizations": {
+    "success": true,
+    "message": "OK",
+    "data": { "items": [], "total": 0 }
+  },
+
+  "GET /attendance/team": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        { "employee": { "id": "emp_003", "employee_id": "SSA003", "full_name": "Vikram Singh", "designation": "Director of Tech & Engineering", "photo_url": null, "status": "weekend", "status_label": "Weekend" }, "location": "Gurgaon", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "check_in": null },
+        { "employee": { "id": "emp_018", "employee_id": "SSA0018", "full_name": "Rahul Mehta", "designation": "Engineering Manager", "photo_url": null, "status": "weekend", "status_label": "Weekend" }, "location": "Gurgaon", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "check_in": null },
+        { "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": "weekend", "status_label": "Weekend" }, "location": "Gurgaon", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "check_in": null },
+        { "employee": { "id": "emp_128", "employee_id": "SSA128", "full_name": "Arjun Nair", "designation": "Senior Backend Developer", "photo_url": null, "status": "weekend", "status_label": "Weekend" }, "location": "Gurgaon", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "check_in": null },
+        { "employee": { "id": "emp_104", "employee_id": "SSA104", "full_name": "Karan Malhotra", "designation": "Senior Software Developer", "photo_url": null, "status": "weekend", "status_label": "Weekend" }, "location": "Gurgaon", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "check_in": null },
+        { "employee": { "id": "emp_121", "employee_id": "SSA121", "full_name": "Siddharth Rao", "designation": "DevOps Engineer", "photo_url": null, "status": "weekend", "status_label": "Weekend" }, "location": "Gurgaon", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "check_in": null },
+        { "employee": { "id": "emp_139", "employee_id": "SSA139", "full_name": "Ananya Das", "designation": "Data Analyst", "photo_url": null, "status": "weekend", "status_label": "Weekend" }, "location": "Bengaluru", "shift": { "name": "General", "start_time": "09:00", "end_time": "18:00" }, "check_in": null }
+      ],
+      "total": 7
+    }
+  },
+
+  "GET /myspace/delegations": {
+    "success": true,
+    "message": "OK",
+    "data": { "items": [], "total": 0 }
+  },
+
+  "GET /employees": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        { "id": "emp_018", "employee_id": "SSA0018", "full_name": "Rahul Mehta", "designation": "Engineering Manager", "photo_url": null, "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_128", "employee_id": "SSA128", "full_name": "Arjun Nair", "designation": "Software Developer", "photo_url": null, "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_132", "employee_id": "SSA132", "full_name": "Priya Sharma", "designation": "QA Engineer", "photo_url": null, "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_104", "employee_id": "SSA104", "full_name": "Karan Malhotra", "designation": "Senior Software Developer", "photo_url": null, "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_110", "employee_id": "SSA110", "full_name": "Neha Kapoor", "designation": "UI/UX Designer", "photo_url": null, "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_121", "employee_id": "SSA121", "full_name": "Siddharth Rao", "designation": "DevOps Engineer", "photo_url": null, "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_139", "employee_id": "SSA139", "full_name": "Ananya Das", "designation": "Data Analyst", "photo_url": null, "status": "weekend", "status_label": "Weekend" }
+      ],
+      "total": 7
+    }
+  },
+
+  "GET /team/space": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "department": { "id": "dep_tech", "name": "Tech", "strength": 7 },
+      "availability": [{ "status": "weekend", "label": "Weekend", "count": 7 }],
+      "location_diversity": [{ "location": "Gurgaon", "count": 7 }],
+      "wall": [],
+      "groups": [],
+      "work_anniversaries": [],
+      "new_hires": [],
+      "birthdays": [],
+      "department_files": []
+    }
+  },
+
+  "GET /leave/summary": {
+    "success": true,
+    "message": "OK",
+    "data": { "from_date": "2026-01-01", "to_date": "2026-12-31", "booked_days": 8.5, "absent_days": 0 }
+  },
+
+  "GET /leave/requests": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        { "id": "lr_12", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_sl", "leave_type_name": "Sick Leave", "leave_type_code": "SL", "pay_type": "Paid", "from_date": "2026-09-08", "to_date": "2026-09-08", "days": 1, "session": "full_day", "reason": "Fever", "status": "approved", "requested_on": "2026-09-08" },
+        { "id": "lr_11", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_cl", "leave_type_name": "Casual Leave", "leave_type_code": "CL", "pay_type": "Paid", "from_date": "2026-08-21", "to_date": "2026-08-21", "days": 1, "session": "full_day", "reason": "Personal work", "status": "approved", "requested_on": "2026-08-21" },
+        { "id": "lr_10", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_sl", "leave_type_name": "Sick Leave", "leave_type_code": "SL", "pay_type": "Paid", "from_date": "2026-07-28", "to_date": "2026-07-28", "days": 1, "session": "full_day", "reason": "Not feeling well", "status": "approved", "requested_on": "2026-07-28" },
+        { "id": "lr_09", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_cl", "leave_type_name": "Casual Leave", "leave_type_code": "CL", "pay_type": "Paid", "from_date": "2026-06-09", "to_date": "2026-06-09", "days": 0.5, "session": "first_half", "reason": "Bank work", "status": "approved", "requested_on": "2026-06-08" },
+        { "id": "lr_08", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_pl", "leave_type_name": "Privilege Leaves", "leave_type_code": "PL", "pay_type": "Paid", "from_date": "2026-05-26", "to_date": "2026-05-26", "days": 1, "session": "full_day", "reason": "Family function", "status": "cancelled", "requested_on": "2026-05-26" },
+        { "id": "lr_07", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_cl", "leave_type_name": "Casual Leave", "leave_type_code": "CL", "pay_type": "Paid", "from_date": "2026-05-25", "to_date": "2026-05-25", "days": 1, "session": "full_day", "reason": "Family function", "status": "approved", "requested_on": "2026-05-25" },
+        { "id": "lr_06", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_sl", "leave_type_name": "Sick Leave", "leave_type_code": "SL", "pay_type": "Paid", "from_date": "2026-05-05", "to_date": "2026-05-05", "days": 1, "session": "full_day", "reason": "Doctor appointment", "status": "approved", "requested_on": "2026-05-05" },
+        { "id": "lr_05", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_sl", "leave_type_name": "Sick Leave", "leave_type_code": "SL", "pay_type": "Paid", "from_date": "2026-04-02", "to_date": "2026-04-02", "days": 1, "session": "full_day", "reason": "Migraine", "status": "approved", "requested_on": "2026-04-02" },
+        { "id": "lr_04", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_cl", "leave_type_name": "Casual Leave", "leave_type_code": "CL", "pay_type": "Paid", "from_date": "2026-03-09", "to_date": "2026-03-09", "days": 1, "session": "full_day", "reason": "Personal work", "status": "approved", "requested_on": "2026-03-09" },
+        { "id": "lr_03", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_cl", "leave_type_name": "Casual Leave", "leave_type_code": "CL", "pay_type": "Paid", "from_date": "2026-02-16", "to_date": "2026-02-16", "days": 1, "session": "full_day", "reason": "Travel", "status": "rejected", "requested_on": "2026-02-14" },
+        { "id": "lr_02", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_cl", "leave_type_name": "Casual Leave", "leave_type_code": "CL", "pay_type": "Paid", "from_date": "2026-02-12", "to_date": "2026-02-12", "days": 0.5, "session": "second_half", "reason": "Personal work", "status": "approved", "requested_on": "2026-02-12" },
+        { "id": "lr_01", "employee": { "id": "emp_146", "employee_id": "SSA146", "full_name": "Pallawi Kumari", "designation": "Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_sl", "leave_type_name": "Sick Leave", "leave_type_code": "SL", "pay_type": "Paid", "from_date": "2026-01-20", "to_date": "2026-01-20", "days": 0.5, "session": "first_half", "reason": "Cold", "status": "approved", "requested_on": "2026-01-20" }
+      ],
+      "total": 12
+    }
+  },
+
+  "GET /leave/team": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        { "id": "tl_03", "employee": { "id": "emp_139", "employee_id": "SSA139", "full_name": "Ananya Das", "designation": "Data Analyst", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_pl", "leave_type_name": "Privilege Leaves", "leave_type_code": "PL", "pay_type": "Paid", "from_date": "2026-10-05", "to_date": "2026-10-09", "days": 5, "session": "full_day", "reason": "Vacation", "status": "pending", "requested_on": "2026-09-12" },
+        { "id": "tl_02", "employee": { "id": "emp_128", "employee_id": "SSA128", "full_name": "Arjun Nair", "designation": "Senior Backend Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_cl", "leave_type_name": "Casual Leave", "leave_type_code": "CL", "pay_type": "Paid", "from_date": "2026-09-21", "to_date": "2026-09-22", "days": 2, "session": "full_day", "reason": "Personal work", "status": "approved", "requested_on": "2026-09-10" },
+        { "id": "tl_01", "employee": { "id": "emp_104", "employee_id": "SSA104", "full_name": "Karan Malhotra", "designation": "Senior Software Developer", "photo_url": null, "status": null, "status_label": null }, "leave_type_id": "lt_sl", "leave_type_name": "Sick Leave", "leave_type_code": "SL", "pay_type": "Paid", "from_date": "2026-09-08", "to_date": "2026-09-08", "days": 1, "session": "full_day", "reason": "Fever", "status": "approved", "requested_on": "2026-09-08" }
+      ],
+      "total": 3
+    }
+  },
+
+  "GET /holidays": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        { "id": "hol_01", "name": "New Year's Day", "date": "2026-01-01", "location": "Gurgaon", "shift": null, "classification": "Holiday" },
+        { "id": "hol_02", "name": "Republic Day", "date": "2026-01-26", "location": "Gurgaon", "shift": null, "classification": "Holiday" },
+        { "id": "hol_03", "name": "Holi", "date": "2026-03-04", "location": "Gurgaon", "shift": null, "classification": "Holiday" },
+        { "id": "hol_09", "name": "Ram Navmi", "date": "2026-03-27", "location": "Gurgaon", "shift": null, "classification": "Holiday" },
+        { "id": "hol_10", "name": "Good Friday", "date": "2026-04-03", "location": "Gurgaon", "shift": null, "classification": "Holiday" },
+        { "id": "hol_11", "name": "Raksha Bandhan", "date": "2026-08-28", "location": "Gurgaon", "shift": null, "classification": "Holiday" },
+        { "id": "hol_04", "name": "Gandhi Jayanti", "date": "2026-10-02", "location": "Gurgaon", "shift": null, "classification": "Holiday" },
+        { "id": "hol_05", "name": "Dussehra", "date": "2026-10-20", "location": "Gurgaon", "shift": null, "classification": "Holiday" },
+        { "id": "hol_13", "name": "Kannada Rajyotsava", "date": "2026-11-01", "location": "Bengaluru", "shift": null, "classification": "Holiday" },
+        { "id": "hol_06", "name": "Bhai Dooj", "date": "2026-11-10", "location": "Gurgaon", "shift": null, "classification": "Holiday" },
+        { "id": "hol_12", "name": "Guru Nanak Jayanti", "date": "2026-11-24", "location": "Gurgaon", "shift": null, "classification": "Holiday" },
+        { "id": "hol_07", "name": "Christmas", "date": "2026-12-25", "location": "All Locations", "shift": "All Shifts", "classification": "Holiday" }
+      ],
+      "total": 12
+    }
+  },
+
+  "GET /hr-letters/types": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        {"key": "address_proof", "name": "Address Proof", "reasons": ["Bank account opening", "Visa application", "Loan application", "Rental agreement", "Others"], "asks_address_change": true, "show_department": false, "show_experience": false},
+        {"key": "bonafide_letter", "name": "Bonafide Letter", "reasons": ["Bank account opening", "Visa application", "Loan application", "Higher studies", "Others"], "asks_address_change": false, "show_department": true, "show_experience": false},
+        {"key": "experience_letter", "name": "Experience Letter", "reasons": ["Visa application", "Higher studies", "Background verification", "Others"], "asks_address_change": false, "show_department": true, "show_experience": true}
+      ],
+      "total": 3
+    }
+  },
+
+  "GET /hr-letters/requests": {
+    "success": true,
+    "message": "OK",
+    "data": { "items": [], "total": 0 }
+  },
+
+  "GET /travel/requests": {
+    "success": true,
+    "message": "OK",
+    "data": { "items": [], "total": 0 }
+  },
+
+  "GET /travel/expenses": {
+    "success": true,
+    "message": "OK",
+    "data": { "items": [], "total": 0 }
+  },
+
+  "GET /tasks": {
+    "success": true,
+    "message": "OK",
+    "data": { "items": [], "total": 0 }
+  },
+
+  "GET /checklists": {
+    "success": true,
+    "message": "OK",
+    "data": { "items": [], "total": 0 }
+  },
+
+  "GET /reports": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        {"key": "career_history", "name": "Career History", "category": "Employee Information", "scope": "my", "description": "Every change to your department, location and designation.", "is_favourite": false},
+        {"key": "leave_balance", "name": "Leave balance", "category": "Time Off", "scope": "my", "description": "Allotted, booked and available days per leave type.", "is_favourite": false},
+        {"key": "early_late_checkin", "name": "Early/late check-in and check-out", "category": "Attendance", "scope": "my", "description": "Days you checked in after or checked out before your shift.", "is_favourite": false},
+        {"key": "present_absent", "name": "Present/absent status", "category": "Attendance", "scope": "my", "description": "Day-by-day attendance status for the month.", "is_favourite": false},
+        {"key": "presence_hours", "name": "Presence hours break-up", "category": "Attendance", "scope": "my", "description": "Hours worked against shift hours for each day.", "is_favourite": false},
+        {"key": "distribution", "name": "Distribution", "category": "Employee Information", "scope": "team", "description": "How your organization is spread across departments, locations and designations.", "is_favourite": false},
+        {"key": "diversity", "name": "Diversity", "category": "Employee Information", "scope": "team", "description": "Mix of locations and tenure across the organization.", "is_favourite": false}
+      ],
+      "total": 7
+    }
+  },
+
+  "GET /exit/resignations": {
+    "success": true,
+    "message": "OK",
+    "data": { "items": [], "total": 0 }
+  },
+
+  "GET /exit/interviews": {
+    "success": true,
+    "message": "OK",
+    "data": { "items": [], "total": 0 }
+  },
+
+  "GET /exit/interview-options": {
+    "success": true,
+    "message": "OK",
+    "data": {"company_name": "Stupa", "primary_reasons": ["Better career opportunity", "Compensation", "Higher studies", "Relocation", "Health reasons", "Work-life balance", "Any other"]}
+  },
+
+  "GET /organization/employees": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        { "id": "emp_001", "employee_id": "SSA001", "first_name": "Anil", "last_name": "Kapoor", "full_name": "Anil Kapoor", "preferred_name": null, "email": "anil.kapoor@example.com", "mobile": null, "photo_url": null, "designation": "Chief Executive Officer", "department_id": "dep_mgmt", "department": "Management", "location": "Gurgaon", "reporting_manager_id": null, "date_of_joining": "2019-04-01", "birthday": "03-12", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_002", "employee_id": "SSA002", "first_name": "Meera", "last_name": "Joshi", "full_name": "Meera Joshi", "preferred_name": null, "email": "meera.joshi@example.com", "mobile": null, "photo_url": null, "designation": "HR Manager", "department_id": "dep_hr", "department": "HR", "location": "Gurgaon", "reporting_manager_id": "emp_001", "date_of_joining": "2020-01-15", "birthday": "09-21", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_003", "employee_id": "SSA003", "first_name": "Vikram", "last_name": "Singh", "full_name": "Vikram Singh", "preferred_name": null, "email": "vikram.singh@example.com", "mobile": null, "photo_url": null, "designation": "Director of Tech & Engineering", "department_id": "dep_tech", "department": "Tech", "location": "Gurgaon", "reporting_manager_id": "emp_001", "date_of_joining": "2020-06-01", "birthday": "11-05", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_004", "employee_id": "SSA004", "first_name": "Sneha", "last_name": "Iyer", "full_name": "Sneha Iyer", "preferred_name": null, "email": "sneha.iyer@example.com", "mobile": null, "photo_url": null, "designation": "Head of Product", "department_id": "dep_product", "department": "Product", "location": "Bengaluru", "reporting_manager_id": "emp_001", "date_of_joining": "2021-02-10", "birthday": "09-28", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_018", "employee_id": "SSA0018", "first_name": "Rahul", "last_name": "Mehta", "full_name": "Rahul Mehta", "preferred_name": null, "email": "rahul.mehta@example.com", "mobile": null, "photo_url": null, "designation": "Engineering Manager", "department_id": "dep_tech", "department": "Tech", "location": "Gurgaon", "reporting_manager_id": "emp_003", "date_of_joining": "2021-08-16", "birthday": "07-19", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_146", "employee_id": "SSA146", "first_name": "Pallawi", "last_name": "Kumari", "full_name": "Pallawi Kumari", "preferred_name": null, "email": "pallawi.kumari@example.com", "mobile": "91-9876543210", "photo_url": null, "designation": "Software Developer", "department_id": "dep_tech", "department": "Tech", "location": "Gurgaon", "reporting_manager_id": "emp_018", "date_of_joining": "2025-08-11", "birthday": "01-01", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_128", "employee_id": "SSA128", "first_name": "Arjun", "last_name": "Nair", "full_name": "Arjun Nair", "preferred_name": null, "email": "arjun.nair@example.com", "mobile": null, "photo_url": null, "designation": "Senior Backend Developer", "department_id": "dep_tech", "department": "Tech", "location": "Gurgaon", "reporting_manager_id": "emp_003", "date_of_joining": "2023-03-22", "birthday": "09-17", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_104", "employee_id": "SSA104", "first_name": "Karan", "last_name": "Malhotra", "full_name": "Karan Malhotra", "preferred_name": null, "email": "karan.malhotra@example.com", "mobile": null, "photo_url": null, "designation": "Senior Software Developer", "department_id": "dep_tech", "department": "Tech", "location": "Gurgaon", "reporting_manager_id": "emp_018", "date_of_joining": "2022-05-29", "birthday": "12-02", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_121", "employee_id": "SSA121", "first_name": "Siddharth", "last_name": "Rao", "full_name": "Siddharth Rao", "preferred_name": "Sid", "email": "siddharth.rao@example.com", "mobile": null, "photo_url": null, "designation": "DevOps Engineer", "department_id": "dep_tech", "department": "Tech", "location": "Gurgaon", "reporting_manager_id": "emp_018", "date_of_joining": "2024-09-02", "birthday": "04-14", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_139", "employee_id": "SSA139", "first_name": "Ananya", "last_name": "Das", "full_name": "Ananya Das", "preferred_name": null, "email": "ananya.das@example.com", "mobile": null, "photo_url": null, "designation": "Data Analyst", "department_id": "dep_tech", "department": "Tech", "location": "Bengaluru", "reporting_manager_id": "emp_018", "date_of_joining": "2024-01-08", "birthday": "06-30", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_110", "employee_id": "SSA110", "first_name": "Neha", "last_name": "Kapoor", "full_name": "Neha Kapoor", "preferred_name": null, "email": "neha.kapoor@example.com", "mobile": null, "photo_url": null, "designation": "UI/UX Designer", "department_id": "dep_design", "department": "Design", "location": "Gurgaon", "reporting_manager_id": "emp_018", "date_of_joining": "2023-02-06", "birthday": "02-11", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_132", "employee_id": "SSA132", "first_name": "Priya", "last_name": "Sharma", "full_name": "Priya Sharma", "preferred_name": null, "email": "priya.sharma@example.com", "mobile": null, "photo_url": null, "designation": "QA Engineer", "department_id": "dep_qa", "department": "QA", "location": "Gurgaon", "reporting_manager_id": "emp_003", "date_of_joining": "2022-07-11", "birthday": "10-09", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_151", "employee_id": "SSA151", "first_name": "Kavya", "last_name": "Reddy", "full_name": "Kavya Reddy", "preferred_name": null, "email": "kavya.reddy@example.com", "mobile": null, "photo_url": null, "designation": "QA Associate", "department_id": "dep_qa", "department": "QA", "location": "Bengaluru", "reporting_manager_id": "emp_132", "date_of_joining": "2025-06-02", "birthday": "08-25", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_154", "employee_id": "SSA154", "first_name": "Rohan", "last_name": "Gupta", "full_name": "Rohan Gupta", "preferred_name": null, "email": "rohan.gupta@example.com", "mobile": null, "photo_url": null, "designation": "Senior Product Manager", "department_id": "dep_product", "department": "Product", "location": "Bengaluru", "reporting_manager_id": "emp_004", "date_of_joining": "2024-10-14", "birthday": "05-05", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" },
+        { "id": "emp_153", "employee_id": "SSA153", "first_name": "Manish", "last_name": "Verma", "full_name": "Manish Verma", "preferred_name": null, "email": "manish.verma@example.com", "mobile": null, "photo_url": null, "designation": "Accountant", "department_id": "dep_finance", "department": "Finance", "location": "Gurgaon", "reporting_manager_id": "emp_001", "date_of_joining": "2024-12-02", "birthday": "03-30", "employment_type": "Full Time", "status": "weekend", "status_label": "Weekend" }
+      ],
+      "total": 15
+    }
+  },
+
+  "GET /organization/departments": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        { "id": "dep_tech", "name": "Tech", "parent_name": null, "head_id": "emp_003", "member_count": 7 },
+        { "id": "dep_product", "name": "Product", "parent_name": null, "head_id": "emp_004", "member_count": 2 },
+        { "id": "dep_qa", "name": "QA", "parent_name": "Tech", "head_id": "emp_132", "member_count": 2 },
+        { "id": "dep_design", "name": "Design", "parent_name": "Product", "head_id": "emp_110", "member_count": 1 },
+        { "id": "dep_hr", "name": "HR", "parent_name": null, "head_id": "emp_002", "member_count": 1 },
+        { "id": "dep_finance", "name": "Finance", "parent_name": null, "head_id": "emp_153", "member_count": 1 },
+        { "id": "dep_mgmt", "name": "Management", "parent_name": null, "head_id": "emp_001", "member_count": 1 }
+      ],
+      "total": 7
+    }
+  },
+
+  "GET /organization/announcements": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "items": [
+        {
+          "id": "ann_02",
+          "title": "Office closed on Gandhi Jayanti",
+          "body": "The office will remain closed on Friday, 02-Oct-2026 for Gandhi Jayanti. Please plan your deliverables accordingly.",
+          "author_name": "Meera Joshi",
+          "created_at": "2026-09-10T17:30:00+05:30",
+          "likes": 5,
+          "liked_by_me": false,
+          "comments_count": 0
+        },
+        {
+          "id": "ann_01",
+          "title": "Let the Colors of Holi Fill Your Life with Joy!",
+          "body": "Wishing everyone a very happy and safe Holi. Celebrations in the cafeteria at 4 PM!",
+          "author_name": "Meera Joshi",
+          "created_at": "2026-03-04T11:11:00+05:30",
+          "likes": 3,
+          "liked_by_me": false,
+          "comments_count": 1
+        }
+      ],
+      "total": 2
+    }
+  },
+
+  "GET /team/approvals": {
+    "success": true,
+    "message": "OK",
+    "data": { "items": [], "total": 0 }
+  },
+
+  "GET /organization/overview": {
+    "success": true,
+    "message": "OK",
+    "data": {
+      "organization": { "name": "Stupa Sports Analytics Private Limited", "country": "India", "logo_url": null },
+      "quick_links": [],
+      "services": [
+        { "key": "time_off", "label": "Time Off" },
+        { "key": "attendance", "label": "Attendance" },
+        { "key": "files", "label": "Files" },
+        { "key": "hr_letters", "label": "HR Letters" },
+        { "key": "travel", "label": "Travel" },
+        { "key": "tasks", "label": "Tasks" },
+        { "key": "exit_management", "label": "Exit management" }
+      ],
+      "locations": [
+        { "id": "loc_01", "name": "Gurgaon", "address": "Gurgaon, Haryana, India", "employee_count": 7 }
+      ]
+    }
+  }
+}

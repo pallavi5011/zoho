@@ -1,0 +1,9 @@
+fastapi>=0.141
+uvicorn[standard]>=0.52
+beanie>=2.2
+pymongo>=4.18
+pydantic-settings>=2.15
+email-validator>=2.3
+pyjwt>=2.14
+pwdlib[argon2]>=0.3
+python-multipart>=0.0.32
